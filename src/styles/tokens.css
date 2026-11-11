@@ -1,0 +1,119 @@
+/**
+ * DIKSHA — THE PERSONAL ARCHIVE
+ * Design Tokens & CSS Custom Properties (Daylight Palette)
+ *
+ * Grounded in: Warm Ivory, Antique Parchment, Deep Walnut, Muted Antique Gold.
+ */
+
+:root {
+  /* ========================================================================
+   * 1. CHROMATIC PALETTE (DAYLIGHT THEME ONLY)
+   * ======================================================================== */
+
+  /* Canvas & Surfaces */
+  --color-bg-base: #faf7f0;           /* Warm Ivory - main page background */
+  --color-bg-surface: #f3ede2;        /* Antique Parchment - cards, panels, vitrines */
+  --color-bg-elevated: #eae2d5;       /* Pressed Vellum - elevated elements, hover states */
+  --color-bg-sunken: #ede6d9;         /* Inset areas, code block backgrounds */
+
+  /* Ink & Typography */
+  --color-text-primary: #2c221e;      /* Deep Walnut Brown - main headings, book prose */
+  --color-text-secondary: #574840;    /* Muted Walnut Ink - summaries, subtitles */
+  --color-text-muted: #87786e;        /* Aged Umber - dates, accession tags, colophon */
+  --color-text-faint: #ad9e92;        /* Watermarks, inactive indicators */
+
+  /* Architectural Borders & Rules */
+  --color-border-hairline: #e5dcd0;   /* Warm Linen Hairline - table rules, soft dividers */
+  --color-border-medium: #cbbfb0;     /* Bookbinder Board - Oxford outer rules, card borders */
+  --color-border-strong: #9e9081;     /* Emphasized frames, accession seals */
+
+  /* Antiquarian Accents */
+  --color-accent-gold: #b89758;       /* Muted Antique Gold - drop caps, seals, active marks */
+  --color-accent-gold-hover: #9e7d3b; /* Deep Antique Gold */
+  --color-accent-gold-soft: rgba(184, 151, 88, 0.12); /* Translucent gold tint */
+  --color-accent-madder: #883b37;     /* Venetian Madder Red - critical marks, highlights */
+  --color-accent-madder-soft: rgba(136, 59, 55, 0.1);
+
+  /* Selection & Focus */
+  --color-selection-bg: #e8dcc4;      /* Antiqued parchment selection */
+  --color-selection-text: #2c221e;
+  --color-focus-ring: #b89758;
+
+  /* ========================================================================
+   * 2. TYPOGRAPHIC MATRIX
+   * ======================================================================== */
+
+  --font-display: 'Cormorant Garamond', Garamond, 'Times New Roman', Georgia, serif;
+  --font-body: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+
+  /* Fluid Responsive Typographic Scale */
+  --text-hero: clamp(2.75rem, 5.5vw + 1rem, 4.5rem);       /* Monumental Foyer titling */
+  --text-title-xl: clamp(2.25rem, 4vw + 0.5rem, 3.25rem);   /* Collection mastheads */
+  --text-title-lg: clamp(1.75rem, 2.5vw + 0.5rem, 2.35rem); /* Monograph & essay titles */
+  --text-title-md: clamp(1.3rem, 1.5vw + 0.3rem, 1.7rem);   /* Card & specimen titles */
+  --text-title-sm: clamp(1.05rem, 1vw + 0.2rem, 1.25rem);   /* Subsection headers */
+
+  --text-body-lead: 1.2rem;       /* Lead introduction paragraphs */
+  --text-body-main: 1.0625rem;    /* Continuous long-form reading (17px) */
+  --text-body-caption: 0.9375rem; /* Marginalia, captions, plate notes (15px) */
+  --text-meta: 0.75rem;           /* Accession tags, timestamps, taxonomy (12px) */
+
+  /* Line Heights */
+  --leading-tight: 1.15;          /* Headings, monument titles */
+  --leading-snug: 1.35;           /* Subheadings, card titles */
+  --leading-reading: 1.75;        /* Long-form continuous reading */
+  --leading-loose: 1.9;           /* Poetry, expansive prose */
+
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.12em;        /* For all-small-caps and accession codes */
+
+  /* ========================================================================
+   * 3. SPATIAL RHYTHM & CONTAINER SCALES
+   * ======================================================================== */
+
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+
+  /* Layout Widths */
+  --container-max: 1240px;        /* Master catalog max width */
+  --prose-max: 720px;             /* Ideal continuous reading column (60-75 cpl) */
+  --prose-wide: 880px;            /* Expanded layout with inline figures */
+
+  /* ========================================================================
+   * 4. NEOCLASSICAL DETAILS & ORNAMENTS
+   * ======================================================================== */
+
+  /* Oxford Rules */
+  --oxford-rule-outer: 1px solid var(--color-border-medium);
+  --oxford-rule-inner: 1px solid var(--color-border-hairline);
+
+  /* Subtle Bookbinder Shadows */
+  --shadow-warm-subtle: 0 1px 3px rgba(44, 34, 30, 0.04);
+  --shadow-warm-card: 0 2px 8px -2px rgba(44, 34, 30, 0.06), 0 6px 16px -4px rgba(44, 34, 30, 0.04);
+  --shadow-warm-raised: 0 4px 16px -2px rgba(44, 34, 30, 0.08), 0 12px 32px -4px rgba(44, 34, 30, 0.06);
+
+  /* Border Radii (Restrained, crisp, scholarly) */
+  --radius-sharp: 0px;
+  --radius-subtle: 2px;
+  --radius-card: 3px;
+
+  /* Motion & Transitions (Graceful, restrained) */
+  --transition-fast: 150ms ease-out;
+  --transition-standard: 250ms ease-out;
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}

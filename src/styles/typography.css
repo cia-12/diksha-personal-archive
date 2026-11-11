@@ -1,0 +1,265 @@
+/**
+ * DIKSHA — THE PERSONAL ARCHIVE
+ * Typography & Editorial Styling
+ *
+ * Cormorant Garamond: Display & monumental headings
+ * Newsreader: Long-form reading prose
+ * Inter: UI, navigation, taxonomy
+ * JetBrains Mono: Technical metadata, code, accession codes
+ */
+
+/* ==========================================================================
+ * 1. HEADINGS (Cormorant Garamond)
+ * ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  color: var(--color-text-primary);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--text-title-xl);
+  font-weight: 400;
+  margin-bottom: var(--space-4);
+}
+
+h2 {
+  font-size: var(--text-title-lg);
+  font-weight: 500;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+}
+
+h3 {
+  font-size: var(--text-title-md);
+  font-weight: 500;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+}
+
+h4 {
+  font-size: var(--text-title-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+/* Monumental Hero Title for Grand Foyer */
+.font-hero {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+}
+
+/* Italicized Display Flourish */
+.font-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+ * 2. PROSE & CONTINUOUS READING (Newsreader)
+ * ========================================================================== */
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--text-body-main);
+  line-height: var(--leading-reading);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.lead-paragraph {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lead);
+  line-height: var(--leading-reading);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-6);
+}
+
+/* ==========================================================================
+ * 3. DROP CAPS & EDITORIAL INITIALS
+ * ========================================================================== */
+
+.drop-cap-wrapper::first-letter,
+.drop-cap-letter {
+  font-family: var(--font-display);
+  font-size: 3.75rem;
+  line-height: 0.85;
+  float: left;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  color: var(--color-accent-gold);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+ * 4. PULL QUOTES & MARGINALIA
+ * ========================================================================== */
+
+blockquote.editorial-quote {
+  position: relative;
+  margin: var(--space-8) 0;
+  padding: var(--space-4) var(--space-8);
+  border-left: 2px solid var(--color-accent-gold);
+  background: var(--color-bg-surface);
+}
+
+blockquote.editorial-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-title-md);
+  line-height: var(--leading-snug);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+blockquote.editorial-quote cite {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--text-meta);
+  font-style: normal;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Sidenote / Marginalia Note */
+.marginalia-note {
+  font-family: var(--font-body);
+  font-size: var(--text-body-caption);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+  border-left: 1px solid var(--color-border-hairline);
+  padding-left: var(--space-3);
+  margin: var(--space-2) 0;
+}
+
+/* ==========================================================================
+ * 5. UI, TAXONOMY & SMALL-CAPS (Inter)
+ * ========================================================================== */
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.small-caps {
+  font-family: var(--font-ui);
+  font-size: var(--text-meta);
+  font-weight: 500;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-hairline);
+  border-radius: var(--radius-subtle);
+}
+
+/* ==========================================================================
+ * 6. TECHNICAL METADATA & CODE (JetBrains Mono)
+ * ========================================================================== */
+
+code,
+pre,
+kbd,
+samp,
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: 'calt' 1, 'zero' 1;
+}
+
+code {
+  font-size: 0.875em;
+  background-color: var(--color-bg-sunken);
+  color: var(--color-text-primary);
+  padding: 2px 6px;
+  border-radius: var(--radius-subtle);
+  border: 1px solid var(--color-border-hairline);
+}
+
+pre {
+  background-color: var(--color-bg-sunken);
+  border: 1px solid var(--color-border-hairline);
+  border-left: 3px solid var(--color-border-medium);
+  padding: var(--space-4);
+  overflow-x: auto;
+  margin: var(--space-4) 0;
+  border-radius: var(--radius-sharp);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.accession-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+ * 7. LAYOUT CONTAINERS
+ * ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.container-prose {
+  width: 100%;
+  max-width: var(--prose-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: var(--prose-wide);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
